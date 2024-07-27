@@ -169,7 +169,6 @@ export function BlockEnd({ position = [0, 0, 0] }) {
 }
 
 export function Bounds({ length = 1 }) {
-
     return <>
         <RigidBody type='fixed' restitution={0.2} friction={0}>
             <mesh
@@ -194,8 +193,9 @@ export function Bounds({ length = 1 }) {
                 receiveShadow
             />
             <CuboidCollider 
+                type="fixed"
                 args={[ 2, 0.1, 2 * length]}
-                position={[ 0, -0.1, -(length * 2) * 2]}
+                position={[ 0, -0.1, -(length * 2) + 2 ]}
                 restitution={ 0.2 }
                 friction={ 1 }
             />
