@@ -7,7 +7,7 @@ import Player from './Player.js'
 export default function Experience() {
     return <>
         <OrbitControls makeDefault />
-        <Physics debug>
+        <Physics debug={false}>
             <Lights />
             <Level/>
             {/* <BlockStart/> */}
